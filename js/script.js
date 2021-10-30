@@ -2,7 +2,7 @@
 {
     const a = [`a`, `b`, `c`, `d`];
 
-    console.log(`${a[0]} + ${a[1]}, ${a[2]} + ${a[3]}`)
+    console.log(`${a[0]} + ${a[1]}, ${a[2]} + ${a[3]}`) // a + b, c + d
 }
 
 // 2. Создайте массив arr с элементами 2, 5, 3, 9. Умножьте первый элемент массива на второй, а третий элемент на четвертый. 
@@ -13,7 +13,7 @@
     
     let result = (arr[0] * arr[1]) + (arr[2] * arr[3]);
     
-    console.log(result);
+    console.log(result); // 37
 }
 
 // 3. Дан массив [ [1, 2, 3], [4, 5, 6], [7,8,9] ]. Выведите на экран цифру 4 из этого массива.
@@ -23,7 +23,7 @@
 
     const d = a.flat().find(item => item === 4);
 
-    console.log(d);
+    console.log(d); // 4
 }
 
 // 4. Дан объект {js:[‘jQuery’, ‘Angular’], php: ‘hello’, css: ‘world’}. Выведите с его помощью слово ‘jQuery’.
@@ -37,13 +37,13 @@
     
     const b = Object.entries(a).flat(2).find(item => item === `jQuery`);
 
-    console.log(b);
+    console.log(b); // jQuery
 
     // or
 
     const c = a.js[0];
 
-    console.log(c);
+    console.log(c); // jQuery
 }
 
 // 5. Заполните массив следующим образом: в первый элемент запишите ‘x’, во второй ‘xx’, в третий ‘xxx’ и так далее.
@@ -58,7 +58,7 @@
         strItem += `x`;
     }
 
-    console.log(a);
+    console.log(a); //  ['x', 'xx', 'xxx', 'xxxx', 'xxxxx', 'xxxxxx']
 }
 
 // 6. Заполните массив следующим образом: в первый элемент запишите ‘1’, во второй ’22’, в третий ‘333’ и так далее.
@@ -71,7 +71,7 @@
         a.push(d)
     }
 
-    console.log(a);
+    console.log(a); // ['1', '22', '333', '4444']
 }
 
 // 7. Сделайте функцию arrayFill, которая будет заполнять массив заданными значениями. 
@@ -84,7 +84,7 @@
         for (i = 0; i < amount; i++) x.push(item);
         return x;
     }
-    console.log(arrayFill(`x`, 5));
+    console.log(arrayFill(`x`, 5)); // ['x', 'x', 'x', 'x', 'x']
 }
 
 // 8. Дан массив с числами. Узнайте сколько элементов с начала массива надо сложить, чтобы в сумме получилось больше 10-ти.
@@ -95,7 +95,7 @@
     let num = 1;
     let result = a.reduce(function(sum, current) {
 	if (sum > 10) {
-		console.log(num);
+		console.log(num); // 5
 		return;
 	} else {
 		num++;
@@ -119,7 +119,7 @@
         return `nedostatochno`
     }
 
-    console.log(howMuchToTen(a))
+    console.log(howMuchToTen(a)) // 5
 }
 
 // 9. Дан массив с числами. Не используя метода reverse переверните его элементы в обратном порядке.
@@ -135,7 +135,7 @@
         return x;
     }
 
-    console.log(reverseFunc(a))
+    console.log(reverseFunc(a)) // [7, 6, 5, 4, 3, 2, 1]
 }
 
 // 10. Дан двухмерный массив с числами, например [[1, 2, 3], [4, 5], [6]]. Найдите сумму элементов этого массива. Массив, конечно же, может быть произвольным.
@@ -145,7 +145,7 @@
 
     let result = a.toString().split(`,`).reduce((prev, item) => +prev + +item);
 
-    console.log(result);
+    console.log(result); // 21
 
 }
 
@@ -157,6 +157,6 @@
 
     let result = a.flat(Infinity).reduce((prev, item) => prev + item);
 
-    console.log(result);
+    console.log(result); // 36
 
 }
